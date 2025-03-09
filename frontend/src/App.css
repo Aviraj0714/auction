@@ -1,0 +1,701 @@
+/* 🔹 Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: #333;
+  }
+  
+  /* 🔹 Navbar Styling */
+  .navbar {
+    background: linear-gradient(45deg, #0d1b2a, #1b263b, #415a77);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .custom-nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  .custom-nav-link:hover {
+    color: #ffcc00 !important;
+    transform: translateY(-2px);
+  }
+  
+  /* 🔹 Buttons */
+  button {
+    padding: 12px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.05);
+  }
+  
+  /* 🔹 Auction Cards */
+  .auction-card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .auction-card:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* 🔹 Auction Status */
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .open {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .closed {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* 🔹 Forms */
+  .form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  input,
+  textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+  }
+  
+  /* 🔹 Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* 🔹 Signin & Signup */
+  .signin-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #007bff, #6610f2);
+    overflow: hidden;
+  }
+  
+  .signin-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .signin-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .signin-subtitle {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .error {
+    color: #ff4d4d;
+    font-size: 14px;
+  }
+  
+  .form-control {
+    border-radius: 10px;
+    height: 45px;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    border: none;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(to right, #6610f2, #007bff);
+    transform: scale(1.05);
+  }
+  
+  .signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .signup-link a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 🔹 Mobile Responsive Adjustments */
+  @media (max-width: 600px) {
+    .app {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    header {
+      padding: 10px 0;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .signin-box {
+      width: 90%;
+      padding: 30px;
+    }
+  
+    .auction-card {
+      padding: 10px;
+    }
+  }
+  .btn-primary {
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+  }
+  .btn-primary:hover {
+    box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.8);
+  }
+/* Background Styling */
+.landing-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: url("https://img.freepik.com/free-vector/background-realistic-abstract-technology-particle_23-2148431735.jpg") no-repeat center center/cover;
+}
+
+/* Dark Overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Content Box with Fixed Width */
+.content-box {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Text Section */
+.text-section {
+  text-align: left;
+  color: white;
+}
+
+.text-section h1 {
+  font-size: 2.8rem;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+}
+
+/* Explore Button */
+.explore-btn {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(to right, #6610f2, #007bff);
+  box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.8);
+}
+
+/* Right Image Section */
+.image-section {
+  text-align: center;
+}
+
+.auction-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .text-section {
+    text-align: center;
+  }
+
+  .text-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+
+  .auction-image {
+    max-width: 300px;
+  }
+}
+/* Auth Page Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #007bff, #6610f2);
+  }
+  
+  /* Signup Box */
+  .auth-box {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Title */
+  .auth-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .auth-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Submit Button */
+  .auth-box button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .auth-box button:hover {
+    background: #0056b3;
+  }
+  
+  .auth-box button:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+  
+  /* Error Message */
+  .error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Switch Text */
+  .switch-text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .switch-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .switch-text a:hover {
+    text-decoration: underline;
+  }
+/* Auction Page Container */
+.auction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff8c00, #ff4500);
+  }
+  
+  /* Auction Box */
+  .auction-box {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Title */
+  .auction-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .auction-box input,
+  .auction-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auction-box textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  /* Submit Button */
+  .auction-box button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4500;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .auction-box button:hover {
+    background: #cc3700;
+  }
+  
+  .auction-box button:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+
+  .logo{
+    width: 80px;
+    height: 50px;
+    
+  }
+  
+  /* Error Message */
+  .error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+/* Auction Page Container */
+.auction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff8c00, #ff4500);
+  }
+  
+  /* Auction Box */
+  .auction-box {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Title */
+  .auction-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .auction-box input,
+  .auction-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auction-box textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  /* Image Preview */
+  .preview-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Submit Button */
+  .auction-box button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4500;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .auction-box button:hover {
+    background: #cc3700;
+  }
+  
+  .auction-box button:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+  
+  /* Error Message */
+  .error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .image-upload-box {
+    width: 100%;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .image-upload-box:hover {
+    border-color: #6610f2;
+  }
+  
+  .image-preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .image-upload-box {
+    width: 100%;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .image-upload-box:hover {
+    border-color: #6610f2;
+  }
+  
+  .image-preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+    .image-upload-box {
+  width: 100%;
+  padding: 20px;
+  border: 2px dashed #007bff;
+  text-align: center;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+}
+
+.image-upload-box:hover {
+  border-color: #6610f2;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+/* PostAuction.css */
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .heading {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input,
+  .textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .image-upload-box {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .upload-text {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .image-preview {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
